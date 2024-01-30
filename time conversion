@@ -1,0 +1,48 @@
+import java.util.*;
+class Solution{
+    static void timer(char a[]){
+        if(a[8]=='P'){
+            int A=(int)a[0]-48;
+            int B=(int)a[1]-48;
+            int C=(A*10)+B ;
+            if(C==12){
+                for(int i=0;i<8;i++){
+                    System.out.print(a[i]);
+                }
+            }
+            else{
+                C=C+12;
+                System.out.print(C);
+                for(int i=2;i<8;i++){
+                    System.out.print(a[i]);
+                }
+            }
+        }
+        else{
+            
+             int A=(int)a[0]-48;
+             int B=(int)a[1]-48;
+             int C=(A*10)+B;
+            if(C==12){
+                C=00;
+                System.out.print(C);
+                for(int i=2;i<8;i++){
+                    System.out.print(a[i]);
+                }
+            }
+            else{
+                for(int i=0;i<8;i++){
+                    System.out.print(a[i]);
+                }
+            }
+        }
+    }
+    
+    
+    public static void main(String[] args){
+        Scanner s=new Scanner(System.in);
+        String st=s.next();
+        char a[]=st.toCharArray();
+        timer(a);
+    }
+}
