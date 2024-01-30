@@ -1,0 +1,36 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+     
+    static void sort(int a[]){
+        int temp=0;
+        for(int i=0;i<5;i++){
+            for(int j=i+1;j<5;j++){
+                if(a[i]>a[j]){
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        long minSum = 0;
+        long maxSum = 0;
+        Arrays.sort(a);
+        for (int i = 0; i < a.length - 1; i++) {
+            minSum += a[i];
+            maxSum += a[i + 1];
+        }
+        System.out.println(minSum + " " + maxSum);
+        
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a[]=new int[5];
+        for(int i=0;i<5;i++){
+            a[i]=s.nextInt();
+        }
+        sort(a);
+       
+    }
+}
