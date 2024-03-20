@@ -1,0 +1,29 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.io.*;
+import java.util.*;
+class HelloWorld {
+    static void assen(int[] a,int n,int k){
+    for(int j=0;j<n-1;j++){
+      for(int i=0;i<n-1;i++){
+          if(a[i]>a[i+1]){
+              int t=a[i];
+              a[i]=a[i+1];
+              a[i+1]=t;
+          }
+          
+      }
+    }
+    System.out.print(a[k-1]);
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int t[]=new int[n];
+        for(int i=0;i<n;i++){
+             t[i]=s.nextInt();
+        }
+        int k=s.nextInt();
+        assen(t,n,k);
+    }
+}
