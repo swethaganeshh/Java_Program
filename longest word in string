@@ -1,0 +1,26 @@
+import java.util.*;
+
+class HelloWorld {
+   static void lengthword(String s){
+       String x[]=s.split(" ");
+       int n=x.length;
+       String t=x[0];
+       int max=x[0].length();
+       for(int i=1;i<n;i++){
+          if(x[i].length()>max){
+              max=x[i].length();
+              t=x[i];
+          }
+       }
+       System.out.print(t);
+      
+       
+       
+   }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String st = s.nextLine();
+        lengthword(st);
+    }
+}
