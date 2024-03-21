@@ -1,0 +1,40 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.io.*;
+import java.util.*;
+class HelloWorld {
+    static void comapret(String str, String str1){
+        int len1=str.length();
+        int len2=str1.length();
+        int i=0;
+        for(i=0;i<len1&& i<len2;i++){
+                if((str.charAt(i))!=(str1.charAt(i)))
+                {
+                    System.out.print(str.charAt(i)+","+str1.charAt(i));
+                    if(i<len1-1 && i<len2-1){
+                        System.out.print(",");
+                    }
+                    
+                }
+        }
+        
+        while(i<len1){
+            System.out.print(","+str.charAt(i));
+            i++;
+        }
+        while(i<len2){
+            System.out.print(","+str1.charAt(i));
+            i++;
+        }
+            }
+       
+        
+        
+    
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+       String str=s.nextLine();
+       String str1=s.nextLine();
+       comapret(str,str1);
+    }
+}
