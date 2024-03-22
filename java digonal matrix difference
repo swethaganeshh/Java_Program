@@ -25,6 +25,14 @@ class HelloWorld {
        int res=sum1-sum2;
        System.out.print(Math.abs(res));
     }
+//instead of abouslte
+
+if(res>0){
+System.out.print(res);
+}
+else{
+System.out.print(res*-1);
+}
     public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);
        int n=sc.nextInt();
