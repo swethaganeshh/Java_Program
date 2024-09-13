@@ -1,0 +1,17 @@
+class Solution {
+    // Function to reverse a linked list.
+    Node reverseList(Node head) {
+        Node current = head; // Start with the head of the list
+        Node prev = null;    // Previous node initialized to null
+        Node next = null;    // Next node initialized to null
+
+        while (current != null) { // Loop until current is null
+            next = current.next;   // Store the next node
+            current.next = prev;   // Reverse the current node's pointer
+            prev = current;        // Move prev to current
+            current = next;        // Move to the next node in the original list
+        }
+
+        return prev; // Return the new head of the reversed list
+    }
+}
